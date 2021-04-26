@@ -13,8 +13,9 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 ## Rodar a aplicação
 
 ### 1) NETWORK
-1.a) Executar o comando para criar a network de comunicação entre containers:
-docker network create desafio-01
+1.1. Executar o comando para criar a network de comunicação entre containers:
+
+`docker network create desafio-01`
 
 ### 2) MYSQL
 2.a) Criar a imagem do MySQL. Vá para pasta mysql:
