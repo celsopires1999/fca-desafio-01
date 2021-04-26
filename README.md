@@ -28,12 +28,17 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 ### 3. GO
 3.1. Criar a imagem do GO. Vá para a pasta go:
+
 `docker build -t desafio-01-go .`
+
 3.2. Criar o container do GO. Para gerar o container vá para a pasta go, pois estou usando pwd para compartilhar volumes:
 `docker run -d --network=desafio-01 --name=desafio-01-go -v $(pwd):/go/app desafio-01-go go run main.go`
 
 ### 4. NGINX
 4.1. Criar a imagem do Nginx. Vá para a pasta nginx:
+
 `docker build -t desafio-01-nginx .`
+
 4.2. Criar o container do NGINX:
+
 `docker run --network=desafio-01 --name=desafio-01-nginx -p 8080:80 desafio-01-nginx`
