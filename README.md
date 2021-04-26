@@ -17,20 +17,20 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 `docker network create desafio-01`
 
-### 2) MYSQL
-2.a) Criar a imagem do MySQL. Vá para pasta mysql:
-docker build -t desafio-01-go .
-2.b) Criar o container do MySQL:
-docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword desafio-01-mysql
+### 2. MYSQL
+2.1. Criar a imagem do MySQL. Vá para pasta mysql:
+`docker build -t desafio-01-go .`
+2.2. Criar o container do MySQL:
+`docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword desafio-01-mysql`
 
-### 3) GO
-3.a) Criar a imagem do GO. Vá para a pasta go:
-docker build -t desafio-01-go .
-3.b) Criar o container do GO. Para gerar o container vá para a pasta go, pois estou usando pwd para compartilhar volumes:
-docker run -d --network=desafio-01 --name=desafio-01-go -v $(pwd):/go/app desafio-01-go go run main.go
+### 3. GO
+3.1. Criar a imagem do GO. Vá para a pasta go:
+`docker build -t desafio-01-go .`
+3.2. Criar o container do GO. Para gerar o container vá para a pasta go, pois estou usando pwd para compartilhar volumes:
+`docker run -d --network=desafio-01 --name=desafio-01-go -v $(pwd):/go/app desafio-01-go go run main.go`
 
-### 4) NGINX
-4.a) Criar a imagem do Nginx. Vá para a pasta nginx:
-docker build -t desafio-01-nginx .
-4.b) Criar o container do NGINX:
-docker run --network=desafio-01 --name=desafio-01-nginx -p 8080:80 desafio-01-nginx
+### 4. NGINX
+4.1. Criar a imagem do Nginx. Vá para a pasta nginx:
+`docker build -t desafio-01-nginx .`
+4.2. Criar o container do NGINX:
+`docker run --network=desafio-01 --name=desafio-01-nginx -p 8080:80 desafio-01-nginx`
