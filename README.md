@@ -43,3 +43,6 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 4.2. Criar o container do NGINX:
 
 `docker run --network=desafio-01 --name=desafio-01-nginx -p 8080:80 desafio-01-nginx`
+
+### 5. Navegador
+5.1. Digitar no navegador `http://localhost:8080/` para obter a lista de alguns módulos do curso.
