@@ -11,6 +11,7 @@ Crie um repositório no github com todo o fonte do programa e das imagens gerada
 Crie um arquivo README.md especificando quais comandos precisamos executar para que a aplicação funcione recebendo as solicitações na porta 8080 de nosso computador. Lembrando que NÃO utilizaremos Docker-compose nesse desafio.
 
 ## Comandos para executar a aplicação a partir do Docker Hub
+
 `docker network create desafio-01
 
 docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword celsopires/desafio-01-mysql
