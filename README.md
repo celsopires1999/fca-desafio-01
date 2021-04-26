@@ -12,7 +12,7 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 ## Comandos para executar a aplicação a partir do Docker Hub
 
-`docker network create desafio-01
+`docker network create desafio-01`
 
 docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword celsopires/desafio-01-mysql
 
