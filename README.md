@@ -12,7 +12,7 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 ## Rodar a aplicação
 
-### 1) NETWORK
+### 1. NETWORK
 1.1. Executar o comando para criar a network de comunicação entre containers:
 
 `docker network create desafio-01`
