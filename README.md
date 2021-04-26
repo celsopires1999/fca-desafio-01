@@ -19,7 +19,9 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 
 ### 2. MYSQL
 2.1. Criar a imagem do MySQL. Vá para pasta mysql:
+
 `docker build -t desafio-01-go .`
+
 2.2. Criar o container do MySQL:
 
 `docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword desafio-01-mysql`
