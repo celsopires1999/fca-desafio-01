@@ -10,7 +10,29 @@ Crie um repositório no github com todo o fonte do programa e das imagens gerada
 
 Crie um arquivo README.md especificando quais comandos precisamos executar para que a aplicação funcione recebendo as solicitações na porta 8080 de nosso computador. Lembrando que NÃO utilizaremos Docker-compose nesse desafio.
 
-## Rodar a aplicação
+## Executar a aplicação a partir do Docker Hub
+1. Executar o comando para criar a network de comunicação entre containers:
+
+`docker network create desafio-01`
+
+2. Criar o container do MySQL:
+
+`docker run -d --network=desafio-01 --name=desafio-01-mysql -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=desafio-01 -e MYSQL_USER=MainUser -e MYSQL_PASSWORD=MainPassword celsopires/desafio-01-mysql`
+
+3.  Criar o container do GO.
+
+`docker run -d --network=desafio-01 --name=desafio-01-go celsopires/desafio-01-go go run main.go`
+
+4. Criar o container do NGINX
+
+`docker run --network=desafio-01 --name=desafio-01-nginx -p 8080:80 celsopires/desafio-01-nginx`
+
+5. Navegador
+
+Digitar no navegador `http://localhost:8080/` para obter a lista de alguns módulos do curso.
+
+
+## Como executar a aplicação a partir do código fonte
 
 ### 1. NETWORK
 1.1. Executar o comando para criar a network de comunicação entre containers:
@@ -20,7 +42,7 @@ Crie um arquivo README.md especificando quais comandos precisamos executar para 
 ### 2. MYSQL
 2.1. Criar a imagem do MySQL. Ir para pasta mysql:
 
-`docker build -t desafio-01-go .`
+`docker build -t desafio-01-mysql .`
 
 2.2. Criar o container do MySQL:
 
